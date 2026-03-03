@@ -159,13 +159,13 @@ Our purpose is to investigate whether Coors Field in Denver, Colorado is truly t
 ## 🤔 Discussion Questions: Stage 1 - Declaration of Purpose
 
 **Question 1: Hypothesis Formation**
-- Why might high altitude affect baseball performance?  
+- Why might high altitude affect baseball performance?<br>  
 
-*I'm not familiar with baseball but I think with high altitude the air will be thinner so when the ball in airborn it will has less air resistance and therefore fly further or faster.*
+*I'm not familiar with baseball but I think with high altitude the air will be thinner so when the ball in airborn it will has less air resistance and therefore fly further or faster.*<br>
 
-- Is Coors Field affected by high altitude?
+- Is Coors Field affected by high altitude?<br>
 
-*To be honest I don't even know where this place is but according to AI it is at 5,280ft which is considered high altitude. So I would imagine COL is somewhat affected by high altitude.*
+*To be honest I don't even know where this place is but according to AI it is at 5,280ft which is considered high altitude. So I would imagine COL is somewhat affected by high altitude.*<br>
 :::
 
 ## Stage 2: Curation of Content
@@ -209,13 +209,13 @@ print(avgDF_2021.head())
 ## 🤔 Discussion Questions: Stage 2 - Curation of Content
 
 **Question 1: Data Aggregation Strategy**
-- How many games are in the dataset? 
+- How many games are in the dataset? <br>
 
-*There are 2429 games in the 2021 dataset and 2430 games in the 2010 dataset.*
+*There are 2429 games in the 2021 dataset and 2430 games in the 2010 dataset.*<br>
 
-- Why do we aggregate individual games into stadium averages before we start the visualization process?
+- Why do we aggregate individual games into stadium averages before we start the visualization process?<br>
 
-*We aggregate individual games into statdium averages because we are trying to tell if this one stadium(COL) is the most run-friendely one. If we don't aggregate there will be too many data points fot one single stadium which is hard to tell anything.*
+*We aggregate individual games into statdium averages because we are trying to tell if this one stadium(COL) is the most run-friendely one. If we don't aggregate there will be too many data points fot one single stadium which is hard to tell anything.*<br>
 :::
 
 ## Stage 3: Structuring of Visual Mappings
@@ -278,22 +278,22 @@ plt.show()
 ## 🤔 Discussion Questions: Stage 3 - Structuring of Visual Mappings
 
 **Question 1: Geometry Choices**
-- Why is a horizontal bar chart better than a scatter plot for this data?
+- Why is a horizontal bar chart better than a scatter plot for this data?<br>
 
-*I think scatter plot is either too many data points without aggregation or not as clear as bar chart because data points are small dots instead of bars that are easy to compare lengths ie.values that we care about. The horizontal bar chart shows one bar per stadium, length = average runs, so readers can compare magnitudes and rank stadiums at a glance.*
+*I think scatter plot is either too many data points without aggregation or not as clear as bar chart because data points are small dots instead of bars that are easy to compare lengths ie.values that we care about. The horizontal bar chart shows one bar per stadium, length = average runs, so readers can compare magnitudes and rank stadiums at a glance.*<br>
 
-- When would you choose a vertical bar chart over horizontal?
+- When would you choose a vertical bar chart over horizontal?<br>
 
-*I think based on the example in the code above, I would choose vertical when I have only few categories and short category names that fit under the axis without rotation. I would choose horizontal when O have many categories (like 30 stadiums) or longer labels—horizontal bars give more room for y-axis labels and avoid cramped, rotated text, which can help improves readability.*
+*I think based on the example in the code above, I would choose vertical when I have only few categories and short category names that fit under the axis without rotation. I would choose horizontal when O have many categories (like 30 stadiums) or longer labels—horizontal bars give more room for y-axis labels and avoid cramped, rotated text, which can help improves readability.*<br>
 
 **Question 2: Aesthetic Mappings**
-- What does the color highlighting accomplish in Approach 4?
+- What does the color highlighting accomplish in Approach 4?<br>
 
-*Approach 4 uses color to clearlyshow and draw viewers' attention to which stadium has the most average runs. Without highlighting, every bar looks equally important.*
+*Approach 4 uses color to clearlyshow and draw viewers' attention to which stadium has the most average runs. Without highlighting, every bar looks equally important.*<br>
 
-- How does position (x/y) compare to color for encoding data?
+- How does position (x/y) compare to color for encoding data?<br>
 
-*I think most situation color is better used as a secondary channel like highlighting or emphasis, grouping or for precise numeric values. So in Stage 3 we use position for the core data (which stadium, how many runs) and color to emphasize our subject of interest (Colorado) within that structure. Position (x/y) is most like a primary channel for magnitude and category which bar length and bar position carry the main quantitative and categorical information that no matter there is color or not, we can still tell which stadium has the most average runs.*
+*I think most situation color is better used as a secondary channel like highlighting or emphasis, grouping or for precise numeric values. So in Stage 3 we use position for the core data (which stadium, how many runs) and color to emphasize our subject of interest (Colorado) within that structure. Position (x/y) is most like a primary channel for magnitude and category which bar length and bar position carry the main quantitative and categorical information that no matter there is color or not, we can still tell which stadium has the most average runs.*<br>
 
 :::
 
@@ -377,13 +377,13 @@ print(f"Colorado is {((colorado_runs / avgDF_2010_sorted.totalRuns.mean()) - 1) 
 ## 🤔 Discussion Questions: Stage 4 - Formatting for Your Audience
 
 **Question 1: Professional Formatting**
-- What elements make this visualization suitable for a business presentation?
+- What elements make this visualization suitable for a business presentation?<br>
 
-*The elements make this visualization suitable for a business presentation because it has many elements that we talked about in class specifically Stage 4 (Formatting for Your Audience) It has bold title states the giving the opinion.The chart uses the right aggregated metric with the horizontal bars clearly show the different between stadiums.Alsi the chart has clear axis labels and units, a legend, unique color for the highest value bar to draw attention to it. It also attampted to have the annotation to point at the highest value bar to show the exact value but it is not pointing at the correct bar.*
+*The elements make this visualization suitable for a business presentation because it has many elements that we talked about in class specifically Stage 4 (Formatting for Your Audience) It has bold title states the giving the opinion.The chart uses the right aggregated metric with the horizontal bars clearly show the different between stadiums.Alsi the chart has clear axis labels and units, a legend, unique color for the highest value bar to draw attention to it. It also attampted to have the annotation to point at the highest value bar to show the exact value but it is not pointing at the correct bar.*<br>
 
-- Is the annotation on the visualization helpful?  Can you fix its placement?
+- Is the annotation on the visualization helpful?  Can you fix its placement?<br>
 
-*It could be helpful but the locaation is wrong. It is not pointing at the correct bar which is the top one.*
+*It could be helpful but the locaation is wrong. It is not pointing at the correct bar which is the top one.*<br>
 
 :::
 
@@ -396,7 +396,7 @@ Let's create a comprehensive comparison between 2010 and 2021:
 
 ```{python}
 #| label: advanced-oo-techniques
-#| echo: true
+#| echo: false
 
 # Advanced Object-Oriented Techniques
 # Create a comprehensive comparison visualization
@@ -467,14 +467,14 @@ plt.show()
 ## 🤔 Discussion Questions: Advanced Object-Oriented Techniques
 
 **Question 1: Using Subplot Layout**
-- Create a two-facet visualization that shows the total runs for 2010 and 2021 for each stadium in a single figure.  Highlight Colorado in the visualization.
+- Create a two-facet visualization that shows the total runs for 2010 and 2021 for each stadium in a single figure.  Highlight Colorado in the visualization.<br>
 
 **Question 2: Explanation of the Visualization**
-- *The visualization compares average runs per game by stadium in two side-by-side panels (2010 and 2021). Each panel is a horizontal bar chart with stadiums on the y-axis and average runs on the x-axis. Colorado (COL) is highlighted in purple so we can track Coors Field across both years; other stadiums are gray. Annotations label COL’s value in each year and, when different, the stadium with the highest runs. The panel titles state which stadium has the most runs in that year (and the value). From this we can see whether COL was the most run-friendly ballpark in 2010, in 2021, or in both, and how the gap between COL and the rest of the league changed over time.*
+- *The visualization compares average runs per game by stadium in two side-by-side panels (2010 and 2021). Each panel is a horizontal bar chart with stadiums on the y-axis and average runs on the x-axis. Colorado (COL) is highlighted in purple so we can track Coors Field across both years; other stadiums are gray. Annotations label COL’s value in each year and, when different, the stadium with the highest runs. The panel titles state which stadium has the most runs in that year (and the value). From this we can see whether COL was the most run-friendly ballpark in 2010, in 2021, or in both, and how the gap between COL and the rest of the league changed over time.*<br>
 
-- Does AI come to the right conclusion?  If not, why not?
+- Does AI come to the right conclusion?  If not, why not?<br>
 
-*Based on the visualization I would say the AI came to the right conclusion. COL is the most run-friendly stadium in both 2010 but not in 2021. BOS had the most runs in 2021 and COL was in the third place in 2021.*
+*Based on the visualization I would say the AI came to the right conclusion. COL is the most run-friendly stadium in both 2010 but not in 2021. BOS had the most runs in 2021 and COL was in the third place in 2021.*<br>
 :::
 
 ## Student Analysis Section: Mastering Object-Oriented Matplotlib {#student-analysis-section}
