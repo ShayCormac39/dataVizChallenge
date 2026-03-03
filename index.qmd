@@ -321,13 +321,24 @@ ax.set_ylabel("Stadium (Home Team)", fontsize=12)
 colorado_bar = plt.Rectangle((0,0),1,1, color="darkorchid", label="Colorado Rockies")
 other_bar = plt.Rectangle((0,0),1,1, color="lightgrey", label="Other Stadiums")
 ax.legend(handles=[colorado_bar, other_bar], loc='lower right', frameon=True)
-
 # Add annotation for Colorado
-colorado_index = avgDF_2010_sorted[avgDF_2010_sorted.home == "COL"].index[0]
-colorado_runs = avgDF_2010_sorted[avgDF_2010_sorted.home == "COL"]["totalRuns"].iloc[0]
-ax.annotate(f"COL: {colorado_runs:.2f} runs/game", 
-            xy=(colorado_runs, colorado_index), 
-            xytext=(colorado_runs + 0.5, colorado_index),
+#colorado_index = avgDF_2010_sorted
+#[avgDF_2010_sorted.home == "COL"].index[0]
+#colorado_runs = avgDF_2010_sorted
+#[avgDF_2010_sorted.home == "COL"]
+#[totalRuns"].iloc[0]
+#ax.annotate(f"COL: {colorado_runs:.2f} 
+#runs/game", 
+           # xy=(colorado_runs, 
+           # colorado_index), 
+            #xytext=(colorado_runs + 0.5, 
+            #colorado_index),
+# Add annotation for Colorado (use bar position, not DataFrame index)
+colorado_bar_pos = np.where(avgDF_2010_sorted.home.values == "COL")[0][0]
+colorado_runs = avgDF_2010_sorted.loc[avgDF_2010_sorted.home == "COL", "totalRuns"].iloc[0]
+ax.annotate(f"COL: {colorado_runs:.2f} runs/game",
+            xy=(colorado_runs, colorado_bar_pos),
+            xytext=(colorado_runs + 0.4, colorado_bar_pos),
             arrowprops=dict(arrowstyle='->', color='darkorchid', lw=2),
             fontsize=10, fontweight='bold', color='darkorchid')
 
@@ -355,7 +366,9 @@ print(f"Colorado is {((colorado_runs / avgDF_2010_sorted.totalRuns.mean()) - 1) 
 
 **Question 1: Professional Formatting**
 - What elements make this visualization suitable for a business presentation?
+*The elements make this visualization suitable for a business presentation because it has many elements that we talked about in class specifically Stage 4 (Formatting for Your Audience) It has bold title states the giving the opinion.The chart uses the right aggregated metric with the horizontal bars clearly show the different between stadiums.Alsi the chart has clear axis labels and units, a legend, unique color for the highest value bar to draw attention to it. It also attampted to have the annotation to point at the highest value bar to show the exact value but it is not pointing at the correct bar.*
 - Is the annotation on the visualization helpful?  Can you fix its placement?
+*It could be helpful but the locaation is wrong. It is not pointing at the correct bar which is the top one.*
 
 :::
 
